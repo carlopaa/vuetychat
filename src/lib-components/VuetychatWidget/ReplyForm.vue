@@ -43,7 +43,7 @@
                 this.clear();
             },
 
-            handleMessage() {
+            handleMessage(event) {
                 if (event.keyCode === 13 && ! event.shiftKey && screen.width > 449) {
                     event.preventDefault();
 
@@ -96,5 +96,9 @@
                 outline: none;
             }
         }
+    }
+
+    .btn-vuetychat:focus {
+        outline: none;
     }
 </style>

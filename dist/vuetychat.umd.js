@@ -970,7 +970,7 @@
                 this.clear();
             },
 
-            handleMessage: function handleMessage() {
+            handleMessage: function handleMessage(event) {
                 if (event.keyCode === 13 && ! event.shiftKey && screen.width > 449) {
                     event.preventDefault();
 
@@ -1001,11 +1001,11 @@
       /* style */
       var __vue_inject_styles__$5 = function (inject) {
         if (!inject) { return }
-        inject("data-v-0bc41214_0", { source: ".vuetychat-reply-form[data-v-0bc41214]{padding:15px;background-color:#fff;color:#333;width:100%;position:absolute;bottom:0;left:0;display:flex;flex-wrap:wrap}.vuetychat-textarea[data-v-0bc41214]{padding:10px;width:100%;min-height:40px;max-height:120px;border-radius:5px;flex:1}.vuetychat-textarea[data-v-0bc41214]::after{content:attr(placeholder);color:#aaa}.vuetychat-textarea[data-v-0bc41214]:focus{outline:0}", map: undefined, media: undefined });
+        inject("data-v-fa18680e_0", { source: ".vuetychat-reply-form[data-v-fa18680e]{padding:15px;background-color:#fff;color:#333;width:100%;position:absolute;bottom:0;left:0;display:flex;flex-wrap:wrap}.vuetychat-textarea[data-v-fa18680e]{padding:10px;width:100%;min-height:40px;max-height:120px;border-radius:5px;flex:1}.vuetychat-textarea[data-v-fa18680e]::after{content:attr(placeholder);color:#aaa}.vuetychat-textarea[data-v-fa18680e]:focus{outline:0}.btn-vuetychat[data-v-fa18680e]:focus{outline:0}", map: undefined, media: undefined });
 
       };
       /* scoped */
-      var __vue_scope_id__$5 = "data-v-0bc41214";
+      var __vue_scope_id__$5 = "data-v-fa18680e";
       /* module identifier */
       var __vue_module_identifier__$5 = undefined;
       /* functional template */
