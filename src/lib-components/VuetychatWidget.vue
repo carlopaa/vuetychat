@@ -1,4 +1,4 @@
-<template>
+ <template>
     <div :style="styles">
         <transition name="fadeUp">
             <div v-if="isOpen"
@@ -15,6 +15,7 @@
 
                 <vuetychat-form-details
                     v-if="showFormDetails"
+                    :processing="processingFormDetails"
                     @submitted="onFormDetailsSubmitted">
                 </vuetychat-form-details>
                 <template v-else>
@@ -98,7 +99,8 @@
             messages: Array,
             userTyping: Object,
             brand: Object,
-            online: Boolean
+            online: Boolean,
+            processingFormDetails: Boolean
         },
 
         watch: {

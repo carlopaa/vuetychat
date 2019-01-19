@@ -1142,8 +1142,22 @@ var __vue_staticRenderFns__$5 = [];
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 var script$6 = {
+    props: {
+        processing: {
+            type: Boolean,
+            default: false
+        }
+    },
+
     data: function data() {
         return {
             form: {
@@ -1168,17 +1182,17 @@ var script$6 = {
             var __vue_script__$6 = script$6;
             
 /* template */
-var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('form',{staticClass:"vuetychat-form-details",attrs:{"action":"/","method":"post"},on:{"submit":function($event){$event.preventDefault();return _vm.store($event)}}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.form.name),expression:"form.name"}],staticClass:"vuetychat-form-input",attrs:{"type":"text","placeholder":"Your name"},domProps:{"value":(_vm.form.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.form, "name", $event.target.value);}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.form.email),expression:"form.email"}],staticClass:"vuetychat-form-input",attrs:{"type":"email","placeholder":"Your email address"},domProps:{"value":(_vm.form.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.form, "email", $event.target.value);}}}),_vm._v(" "),_c('button',{staticClass:"vuetychat-btn",attrs:{"type":"submit"}},[_vm._v("Start Chat")])])};
+var __vue_render__$6 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('form',{staticClass:"vuetychat-form-details",attrs:{"action":"/","method":"post"},on:{"submit":function($event){$event.preventDefault();return _vm.store($event)}}},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.form.name),expression:"form.name"}],staticClass:"vuetychat-form-input",attrs:{"type":"text","placeholder":"Your name"},domProps:{"value":(_vm.form.name)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.form, "name", $event.target.value);}}}),_vm._v(" "),_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.form.email),expression:"form.email"}],staticClass:"vuetychat-form-input",attrs:{"type":"email","placeholder":"Your email address"},domProps:{"value":(_vm.form.email)},on:{"input":function($event){if($event.target.composing){ return; }_vm.$set(_vm.form, "email", $event.target.value);}}}),_vm._v(" "),_c('button',{staticClass:"vuetychat-btn",attrs:{"type":"submit","disabled":_vm.processing}},[(_vm.processing)?[_vm._v("\n            Processing\n        ")]:[_vm._v("\n            Start Chat\n        ")]],2)])};
 var __vue_staticRenderFns__$6 = [];
 
   /* style */
   var __vue_inject_styles__$6 = function (inject) {
     if (!inject) { return }
-    inject("data-v-b8a3c558_0", { source: ".vuetychat-form-details[data-v-b8a3c558]{margin:10px;padding:10px;background-color:#fff;@apply .rounded;}.vuetychat-form-input[data-v-b8a3c558]{display:block;width:100%;background-color:#f1f5f8;color:#3d4852;border-width:2px;border-radius:.25rem;padding:.75rem 1rem;margin-bottom:1rem;line-height:1.25}.vuetychat-btn[data-v-b8a3c558]{text-decoration:none;display:inline-block;padding:1rem 2.5rem;color:#3d4852;border-radius:.25rem;background-color:var(--vuetychat-widget-btn-bg-color);color:var(--vuetychat-widget-btn-text-color);outline:0;transition:ease-in-out all .2s}", map: undefined, media: undefined });
+    inject("data-v-b5aedcfc_0", { source: ".vuetychat-form-details[data-v-b5aedcfc]{margin:10px;padding:10px;background-color:#fff;@apply .rounded;}.vuetychat-form-input[data-v-b5aedcfc]{display:block;width:100%;background-color:#f1f5f8;color:#3d4852;border-width:2px;border-radius:.25rem;padding:.75rem 1rem;margin-bottom:1rem;line-height:1.25}.vuetychat-btn[data-v-b5aedcfc]{text-decoration:none;display:inline-block;padding:1rem 2.5rem;color:#3d4852;border-radius:.25rem;background-color:var(--vuetychat-widget-btn-bg-color);color:var(--vuetychat-widget-btn-text-color);outline:0;transition:ease-in-out all .2s}.vuetychat-btn[data-v-b5aedcfc]:disabled{background-color:#b8c2cc;color:#606f7b}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__$6 = "data-v-b8a3c558";
+  var __vue_scope_id__$6 = "data-v-b5aedcfc";
   /* module identifier */
   var __vue_module_identifier__$6 = undefined;
   /* functional template */
@@ -1368,7 +1382,8 @@ var script$7 = {
         messages: Array,
         userTyping: Object,
         brand: Object,
-        online: Boolean
+        online: Boolean,
+        processingFormDetails: Boolean
     },
 
     watch: {
@@ -1450,17 +1465,17 @@ var script$7 = {
             var __vue_script__$7 = script$7;
             
 /* template */
-var __vue_render__$7 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{style:(_vm.styles)},[_c('transition',{attrs:{"name":"fadeUp"}},[(_vm.isOpen)?_c('div',{staticClass:"vuetychat-widget",class:{'messages-is-visible' : ! this.showFormDetails}},[_c('vuetychat-header',{attrs:{"brand":_vm.brand,"online":_vm.online,"online-message":_vm.onlineMessage,"offline-message":_vm.offlineMessage},on:{"closed":_vm.onToggle}}),_vm._v(" "),(_vm.showFormDetails)?_c('vuetychat-form-details',{on:{"submitted":_vm.onFormDetailsSubmitted}}):[_c('vuetychat-messages',{ref:"vuetyChatMessages",attrs:{"messages":_vm.messages,"sender":_vm.sender,"user-typing":_vm.userTyping}}),_vm._v(" "),_c('vuetychat-reply-form',{ref:"replyForm",on:{"submitted":_vm.onSubmit,"typing":_vm.onTyping}})]],2):_vm._e()]),_vm._v(" "),_c('vuetychat-launcher',{attrs:{"is-open":_vm.isOpen},on:{"toggled":_vm.onToggle}})],1)};
+var __vue_render__$7 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{style:(_vm.styles)},[_c('transition',{attrs:{"name":"fadeUp"}},[(_vm.isOpen)?_c('div',{staticClass:"vuetychat-widget",class:{'messages-is-visible' : ! this.showFormDetails}},[_c('vuetychat-header',{attrs:{"brand":_vm.brand,"online":_vm.online,"online-message":_vm.onlineMessage,"offline-message":_vm.offlineMessage},on:{"closed":_vm.onToggle}}),_vm._v(" "),(_vm.showFormDetails)?_c('vuetychat-form-details',{attrs:{"processing":_vm.processingFormDetails},on:{"submitted":_vm.onFormDetailsSubmitted}}):[_c('vuetychat-messages',{ref:"vuetyChatMessages",attrs:{"messages":_vm.messages,"sender":_vm.sender,"user-typing":_vm.userTyping}}),_vm._v(" "),_c('vuetychat-reply-form',{ref:"replyForm",on:{"submitted":_vm.onSubmit,"typing":_vm.onTyping}})]],2):_vm._e()]),_vm._v(" "),_c('vuetychat-launcher',{attrs:{"is-open":_vm.isOpen},on:{"toggled":_vm.onToggle}})],1)};
 var __vue_staticRenderFns__$7 = [];
 
   /* style */
   var __vue_inject_styles__$7 = function (inject) {
     if (!inject) { return }
-    inject("data-v-3727b6d4_0", { source: ".overflow-x[data-v-3727b6d4]{overflow:hidden!important}.vuetychat-widget[data-v-3727b6d4]{z-index:9999;width:370px;max-width:590px;position:fixed;right:25px;bottom:100px;box-sizing:border-box;background-color:#f5f5f5;border-radius:5px;box-shadow:0 2px 4px 0 rgba(0,0,0,.1);overflow:hidden}@media screen and (max-width:450px){.vuetychat-widget[data-v-3727b6d4]{width:100%;height:100%!important;max-height:100%;left:0;top:0;border-radius:0;z-index:9999}}.vuetychat-widget.messages-is-visible[data-v-3727b6d4]{height:calc(100% - 200px)}.fadeUp-enter[data-v-3727b6d4],.fadeUp-leave-to[data-v-3727b6d4]{transform:translateY(20px);opacity:0}.fadeUp-enter-to[data-v-3727b6d4],.fadeUp-leave[data-v-3727b6d4]{transform:translateY(0);opacity:1}.fadeUp-enter-active[data-v-3727b6d4],.fadeUp-leave-active[data-v-3727b6d4]{transition:all ease-in-out .2s}", map: undefined, media: undefined });
+    inject("data-v-aeeef870_0", { source: ".overflow-x[data-v-aeeef870]{overflow:hidden!important}.vuetychat-widget[data-v-aeeef870]{z-index:9999;width:370px;max-width:590px;position:fixed;right:25px;bottom:100px;box-sizing:border-box;background-color:#f5f5f5;border-radius:5px;box-shadow:0 2px 4px 0 rgba(0,0,0,.1);overflow:hidden}@media screen and (max-width:450px){.vuetychat-widget[data-v-aeeef870]{width:100%;height:100%!important;max-height:100%;left:0;top:0;border-radius:0;z-index:9999}}.vuetychat-widget.messages-is-visible[data-v-aeeef870]{height:calc(100% - 200px)}.fadeUp-enter[data-v-aeeef870],.fadeUp-leave-to[data-v-aeeef870]{transform:translateY(20px);opacity:0}.fadeUp-enter-to[data-v-aeeef870],.fadeUp-leave[data-v-aeeef870]{transform:translateY(0);opacity:1}.fadeUp-enter-active[data-v-aeeef870],.fadeUp-leave-active[data-v-aeeef870]{transition:all ease-in-out .2s}", map: undefined, media: undefined });
 
   };
   /* scoped */
-  var __vue_scope_id__$7 = "data-v-3727b6d4";
+  var __vue_scope_id__$7 = "data-v-aeeef870";
   /* module identifier */
   var __vue_module_identifier__$7 = undefined;
   /* functional template */

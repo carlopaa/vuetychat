@@ -2,12 +2,26 @@
     <form action="/" method="post" class="vuetychat-form-details" @submit.prevent="store">
         <input class="vuetychat-form-input" type="text" placeholder="Your name" v-model="form.name">
         <input class="vuetychat-form-input" type="email" placeholder="Your email address" v-model="form.email">
-        <button type="submit" class="vuetychat-btn">Start Chat</button>
+        <button type="submit" class="vuetychat-btn" :disabled="processing">
+            <template v-if="processing">
+                Processing
+            </template>
+            <template v-else>
+                Start Chat
+            </template>
+        </button>
     </form>
 </template>
 
 <script>
     export default {
+        props: {
+            processing: {
+                type: Boolean,
+                default: false
+            }
+        },
+
         data() {
             return {
                 form: {
@@ -60,6 +74,11 @@
             color: var(--vuetychat-widget-btn-text-color);
             outline: none;
             transition: ease-in-out all 200ms;
+
+            &:disabled {
+                background-color: #b8c2cc;
+                color: #606f7b;
+            }
         }
     }
 </style>
