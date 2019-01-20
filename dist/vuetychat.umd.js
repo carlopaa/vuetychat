@@ -1394,9 +1394,7 @@
 
         watch: {
             messages: function messages() {
-                var this$1 = this;
-
-                setTimeout(function () { return this$1.$refs.vuetyChatMessages.scrollToBottom(); }, 1);
+                this.scrollMessagesToBottom();
             }
         },
 
@@ -1433,6 +1431,8 @@
         methods: {
             onToggle: function onToggle() {
                 if (this.isOpen = ! this.isOpen) {
+                    this.scrollMessagesToBottom();
+
                     return this.$emit('opened');
                 }
 
@@ -1463,6 +1463,12 @@
 
             onFormDetailsSubmitted: function onFormDetailsSubmitted(form) {
                 this.$emit('form-details:submitted', form);
+            },
+
+            scrollMessagesToBottom: function scrollMessagesToBottom() {
+                var this$1 = this;
+
+                return setTimeout(function () { return this$1.$refs.vuetyChatMessages.scrollToBottom(); }, 1);
             }
         }
     };
@@ -1477,11 +1483,11 @@
       /* style */
       var __vue_inject_styles__$7 = function (inject) {
         if (!inject) { return }
-        inject("data-v-aeeef870_0", { source: ".overflow-x[data-v-aeeef870]{overflow:hidden!important}.vuetychat-widget[data-v-aeeef870]{z-index:9999;width:370px;max-width:590px;position:fixed;right:25px;bottom:100px;box-sizing:border-box;background-color:#f5f5f5;border-radius:5px;box-shadow:0 2px 4px 0 rgba(0,0,0,.1);overflow:hidden}@media screen and (max-width:450px){.vuetychat-widget[data-v-aeeef870]{width:100%;height:100%!important;max-height:100%;left:0;top:0;border-radius:0;z-index:9999}}.vuetychat-widget.messages-is-visible[data-v-aeeef870]{height:calc(100% - 200px)}.fadeUp-enter[data-v-aeeef870],.fadeUp-leave-to[data-v-aeeef870]{transform:translateY(20px);opacity:0}.fadeUp-enter-to[data-v-aeeef870],.fadeUp-leave[data-v-aeeef870]{transform:translateY(0);opacity:1}.fadeUp-enter-active[data-v-aeeef870],.fadeUp-leave-active[data-v-aeeef870]{transition:all ease-in-out .2s}", map: undefined, media: undefined });
+        inject("data-v-3681cb20_0", { source: ".overflow-x[data-v-3681cb20]{overflow:hidden!important}.vuetychat-widget[data-v-3681cb20]{z-index:9999;width:370px;max-width:590px;position:fixed;right:25px;bottom:100px;box-sizing:border-box;background-color:#f5f5f5;border-radius:5px;box-shadow:0 2px 4px 0 rgba(0,0,0,.1);overflow:hidden}@media screen and (max-width:450px){.vuetychat-widget[data-v-3681cb20]{width:100%;height:100%!important;max-height:100%;left:0;top:0;border-radius:0;z-index:9999}}.vuetychat-widget.messages-is-visible[data-v-3681cb20]{height:calc(100% - 200px)}.fadeUp-enter[data-v-3681cb20],.fadeUp-leave-to[data-v-3681cb20]{transform:translateY(20px);opacity:0}.fadeUp-enter-to[data-v-3681cb20],.fadeUp-leave[data-v-3681cb20]{transform:translateY(0);opacity:1}.fadeUp-enter-active[data-v-3681cb20],.fadeUp-leave-active[data-v-3681cb20]{transition:all ease-in-out .2s}", map: undefined, media: undefined });
 
       };
       /* scoped */
-      var __vue_scope_id__$7 = "data-v-aeeef870";
+      var __vue_scope_id__$7 = "data-v-3681cb20";
       /* module identifier */
       var __vue_module_identifier__$7 = undefined;
       /* functional template */

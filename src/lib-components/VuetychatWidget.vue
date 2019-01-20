@@ -105,7 +105,7 @@
 
         watch: {
             messages() {
-                setTimeout(() => this.$refs.vuetyChatMessages.scrollToBottom(), 1);
+                this.scrollMessagesToBottom();
             }
         },
 
@@ -140,6 +140,8 @@
         methods: {
             onToggle() {
                 if (this.isOpen = ! this.isOpen) {
+                    this.scrollMessagesToBottom();
+
                     return this.$emit('opened');
                 }
 
@@ -170,6 +172,10 @@
 
             onFormDetailsSubmitted(form) {
                 this.$emit('form-details:submitted', form);
+            },
+
+            scrollMessagesToBottom() {
+                return setTimeout(() => this.$refs.vuetyChatMessages.scrollToBottom(), 1);
             }
         }
     }

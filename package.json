@@ -4,6 +4,7 @@
   "description": "A chat support Vue components",
   "author": "Carlo Garcia Paa <dev@carlopaa.me>",
   "license": "MIT",
+  "repository": "carlopaa/vuetychat",
   "main": "dist/vuetychat.umd.js",
   "module": "dist/vuetychat.esm.js",
   "unpkg": "dist/vuetychat.min.js",
