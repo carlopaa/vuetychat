@@ -24,7 +24,9 @@
         props: {
             messages: {
                 type: Array,
-                default: []
+                default: () => {
+                    return [];
+                }
             },
 
             userTyping: Object,

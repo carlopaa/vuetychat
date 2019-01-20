@@ -72,6 +72,9 @@
             position: absolute;
             right: 15px;
             outline: none;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
         }
     }
 </style>

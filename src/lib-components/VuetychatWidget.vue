@@ -139,7 +139,9 @@
 
         methods: {
             onToggle() {
-                if (this.isOpen = ! this.isOpen) {
+                this.isOpen = ! this.isOpen;
+
+                if (this.isOpen) {
                     this.scrollMessagesToBottom();
 
                     return this.$emit('opened');
@@ -175,6 +177,10 @@
             },
 
             scrollMessagesToBottom() {
+                if (this.showFormDetails) {
+                    return;
+                }
+
                 return setTimeout(() => this.$refs.vuetyChatMessages.scrollToBottom(), 1);
             }
         }

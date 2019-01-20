@@ -32,7 +32,7 @@
             },
 
             cleanText(text) {
-                return text.replace(/[\s\/]/g, '');
+                return text.replace(/[\s/]/g, '');
             },
 
             updatePlaceholder(input) {
@@ -77,15 +77,17 @@
             left: 0;
             display: flex;
             flex-wrap: wrap;
+            box-sizing: border-box;
         }
 
         &-textarea {
             padding: 10px;
             width: 100%;
-            min-height: 40px;
             max-height: 120px;
             border-radius: 5px;
             flex: 1;
+            overflow-y: auto;
+            margin-right: 10px;
 
             &::after {
                 content: attr(placeholder);
@@ -98,7 +100,14 @@
         }
     }
 
-    .btn-vuetychat:focus {
-        outline: none;
+    .btn-vuetychat {
+        background-color: transparent;
+        border: none;
+        display: flex;
+        align-items: center;
+
+        &:focus {
+            outline: none;
+        }
     }
 </style>

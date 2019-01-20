@@ -39,6 +39,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            border: none;
+            cursor: pointer;
             box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
             z-index: 999;
 
