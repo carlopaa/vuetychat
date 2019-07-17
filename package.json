@@ -1,6 +1,6 @@
 {
   "name": "vuetychat",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A chat support Vue components",
   "author": "Carlo Garcia Paa <dev@carlopaa.me>",
   "license": "MIT",
