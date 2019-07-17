@@ -20,7 +20,7 @@
         props: {
             brand: {
                 type: Object,
-                default: () => {
+                default: function () {
                     return {
                         logo: 'https://s.gravatar.com/avatar/8664b2d4aeb798cb642163cce65863e2?s=50',
                         name: 'Vuetychat'
